@@ -1,0 +1,10 @@
+.idea/
+venv/
+.venv/
+env/
+.env
+.coverage
+__pycache__/
+*.pyc
+config.py
+*.cfg
