@@ -8,6 +8,7 @@ from aiogram.filters import Command
 from vosk import Model, KaldiRecognizer
 
 router = Router()
+API_TOKEN = os.getenv('API_TOKEN')
 bot = Bot(token=API_TOKEN)
 
 
