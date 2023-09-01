@@ -7,6 +7,9 @@ from aiogram import Bot, Dispatcher, Router, types
 from aiogram.filters import Command
 from vosk import Model, KaldiRecognizer
 
+
+
+
 router = Router()
 API_TOKEN = os.getenv('API_TOKEN')
 bot = Bot(token=API_TOKEN)
@@ -47,12 +50,11 @@ def voice_to_text(file_on_disk):
     model = Model("model/vosk-model-small-ru-0.22")
     recognizer = KaldiRecognizer(model, 16000)
     recognizer.SetWords(True)
-    ffmpeg_path = "model/vosk-model-small-ru-0.22/ffmpeg_4.4.2.orig.tar.xz"
     process = subprocess.Popen(
-        [ffmpeg_path,
+        ["ffmpeg",
          "-loglevel", "quiet",
          "-i", file_on_disk,
-         "-ar", "15000",
+         "-ar", "16000",
          "-ac", "1",
          "-f", "wav",
          "-"],
