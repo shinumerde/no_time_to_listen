@@ -47,7 +47,7 @@ def voice_to_text(file_on_disk):
     model = Model("model/vosk-model-small-ru-0.22")
     recognizer = KaldiRecognizer(model, 16000)
     recognizer.SetWords(True)
-    ffmpeg_path = "model/vosk-model-small-ru-0.22/ffmpeg.exe"
+    ffmpeg_path = "model/vosk-model-small-ru-0.22/ffmpeg_4.4.2.orig.tar.xz"
     process = subprocess.Popen(
         [ffmpeg_path,
          "-loglevel", "quiet",
