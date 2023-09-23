@@ -25,3 +25,6 @@ https://t.me/NoTimeToListenBot
   https://t.me/BotFather
   ```
 - Полученный API токен подставьте вместо переменной API_TOKEN в app.py либо используйте .env файл с переменной API_TOKEN
+
+### P.S.
+Procfile нужен для запуска приложения на heroku.
